@@ -1,0 +1,4 @@
+{
+    "ConsumerKey" : "<Replace with the consumer key from your Connected App definition>",
+    "CallbackURL" : "<Replace with the callback URL from your Connected App definition>"
+}
