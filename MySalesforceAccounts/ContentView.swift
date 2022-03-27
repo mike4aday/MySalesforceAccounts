@@ -12,42 +12,58 @@ import SwiftlySalesforce
 struct ContentView: View {
     
     @StateObject var salesforce: Connection = try! Salesforce.connect()
-    @State var state: LoadingState<QueryResult<SalesforceRecord>> = .idle
+    @State var state: LoadingState<[SalesforceRecord]> = .idle
         
     var body: some View {
         switch state {
         case .idle:
             Color.clear
             .task {
-                do {
-                    let results = try await salesforce.myRecords(type: "Account", fields: ["Id", "Name", "BillingCity"])
-                    state = .loaded(results)
-                }
-                catch {
-                    state = .failed(error)
-                }
+                await load()
             }
         case .loading:
             ProgressView()
         case .failed(let error):
-            ErrorView(error: error, retry: { print("TODO") })
-        case .loaded(let queryResult):
-            QueryResultView(queryResult: queryResult)
+            ErrorView(error: error, retry: { await load() })
+        case .loaded(let records):
+            AsyncButton(action: load) {
+                HStack {
+                    AsyncButton(systemImageName: "arrow.clockwise", action: load)
+                    Text("Loaded: \(Date().formatted(date: .abbreviated, time: .standard))")
+                }
+            }
+            RecordsView(records: records)
         }
     }
 }
 
 extension ContentView {
     
-    struct QueryResultView: View {        
-        var queryResult: QueryResult<SalesforceRecord>
+    struct RecordsView: View {
+        var records: [SalesforceRecord]
         var body: some View {
-            List(queryResult.records, id: \.id) { account in
+            List(records, id: \.id) { account in
                 VStack(alignment: .leading) {
                     Text(account["Name"] ?? "N/A").bold()
                     Text("ID: \(account.id)")
                     Text("Billing City: \(account["BillingCity"] ?? "N/A")")
                 }.padding()
+            }
+        }
+    }
+}
+
+extension ContentView {
+    
+    func load() async {
+        state = .loading
+        Task {
+            do {
+                let queryResults = try await salesforce.myRecords(type: "Account", fields: ["Id", "Name", "BillingCity"])
+                state = .loaded(queryResults.records)
+            }
+            catch {
+                state = .failed(error)
             }
         }
     }

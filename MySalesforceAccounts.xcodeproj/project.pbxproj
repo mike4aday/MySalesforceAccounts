@@ -17,6 +17,7 @@
 		EA6351F32666947600D3F4C1 /* Salesforce.json in Resources */ = {isa = PBXBuildFile; fileRef = EA6351F22666947600D3F4C1 /* Salesforce.json */; };
 		EAEE128427F0DB9100BC3D2E /* SwiftlySalesforce in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE128327F0DB9100BC3D2E /* SwiftlySalesforce */; };
 		EAEE128627F0F26300BC3D2E /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE128527F0F26300BC3D2E /* LoadingState.swift */; };
+		EAEE128827F0FDC600BC3D2E /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE128727F0FDC600BC3D2E /* AsyncButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		EA6351E0266693BC00D3F4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA6351F22666947600D3F4C1 /* Salesforce.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Salesforce.json; sourceTree = "<group>"; };
 		EAEE128527F0F26300BC3D2E /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		EAEE128727F0FDC600BC3D2E /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				EA6351C5266693BC00D3F4C1 /* Assets.xcassets */,
+				EAEE128727F0FDC600BC3D2E /* AsyncButton.swift */,
 				EA6351C3266693BB00D3F4C1 /* ContentView.swift */,
 				EA49FFE52666E0B200917E3D /* ErrorView.swift */,
 				EA6351CA266693BC00D3F4C1 /* Info.plist */,
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAEE128627F0F26300BC3D2E /* LoadingState.swift in Sources */,
+				EAEE128827F0FDC600BC3D2E /* AsyncButton.swift in Sources */,
 				EA6351C4266693BB00D3F4C1 /* ContentView.swift in Sources */,
 				EA6351C2266693BB00D3F4C1 /* MySalesforceAccountsApp.swift in Sources */,
 				EA49FFE62666E0B200917E3D /* ErrorView.swift in Sources */,

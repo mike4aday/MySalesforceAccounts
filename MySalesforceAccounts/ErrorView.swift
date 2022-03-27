@@ -10,9 +10,9 @@ import SwiftUI
 struct ErrorView: View {
     
     var error: Error
-    var retry: () -> ()
+    var retry: () async -> ()
     
-    init(error: Error, retry: @escaping () -> ()) {
+    init(error: Error, retry: @escaping () async -> ()) {
         self.error = error
         self.retry = retry
     }
@@ -27,7 +27,9 @@ struct ErrorView: View {
                 .bold()
             Text(error.localizedDescription)
             Button("Try Again") {
-                retry()
+                Task {
+                    await retry()
+                }
             }
             Spacer()
         }
