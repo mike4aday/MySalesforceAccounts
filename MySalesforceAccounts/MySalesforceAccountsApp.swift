@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftlySalesforce
 
 @main
 struct MySalesforceAccountsApp: App {

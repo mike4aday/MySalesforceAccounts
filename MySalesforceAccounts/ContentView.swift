@@ -11,18 +11,28 @@ import SwiftlySalesforce
 
 struct ContentView: View {
     
-    @StateObject private var loader = MyAccountsLoader()
+    @StateObject var salesforce: Connection = try! Salesforce.connect()
+    @State var state: LoadingState<QueryResult<SalesforceRecord>> = .idle
         
     var body: some View {
-        switch loader.state {
+        switch state {
         case .idle:
-            Color.clear.onAppear(perform: loader.load)
+            Color.clear
+            .task {
+                do {
+                    let results = try await salesforce.myRecords(type: "Account", fields: ["Id", "Name", "BillingCity"])
+                    state = .loaded(results)
+                }
+                catch {
+                    state = .failed(error)
+                }
+            }
         case .loading:
             ProgressView()
         case .failed(let error):
-            ErrorView(error: error, retry: loader.load)
-        case .loaded(let output):
-            QueryResultView(queryResult: output)
+            ErrorView(error: error, retry: { print("TODO") })
+        case .loaded(let queryResult):
+            QueryResultView(queryResult: queryResult)
         }
     }
 }
@@ -36,6 +46,7 @@ extension ContentView {
                 VStack(alignment: .leading) {
                     Text(account["Name"] ?? "N/A").bold()
                     Text("ID: \(account.id)")
+                    Text("Billing City: \(account["BillingCity"] ?? "N/A")")
                 }.padding()
             }
         }
@@ -47,3 +58,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

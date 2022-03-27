@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EA49FFE62666E0B200917E3D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49FFE52666E0B200917E3D /* ErrorView.swift */; };
-		EA49FFEE2666E54800917E3D /* MyAccountsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49FFED2666E54800917E3D /* MyAccountsLoader.swift */; };
 		EA6351C2266693BB00D3F4C1 /* MySalesforceAccountsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6351C1266693BB00D3F4C1 /* MySalesforceAccountsApp.swift */; };
 		EA6351C4266693BB00D3F4C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6351C3266693BB00D3F4C1 /* ContentView.swift */; };
 		EA6351C6266693BC00D3F4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6351C5266693BC00D3F4C1 /* Assets.xcassets */; };
@@ -16,7 +15,8 @@
 		EA6351D4266693BC00D3F4C1 /* MySalesforceAccountsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6351D3266693BC00D3F4C1 /* MySalesforceAccountsTests.swift */; };
 		EA6351DF266693BC00D3F4C1 /* MySalesforceAccountsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6351DE266693BC00D3F4C1 /* MySalesforceAccountsUITests.swift */; };
 		EA6351F32666947600D3F4C1 /* Salesforce.json in Resources */ = {isa = PBXBuildFile; fileRef = EA6351F22666947600D3F4C1 /* Salesforce.json */; };
-		EAF659252666EC06005F5ACD /* SwiftlySalesforce in Frameworks */ = {isa = PBXBuildFile; productRef = EAF659242666EC06005F5ACD /* SwiftlySalesforce */; };
+		EAEE128427F0DB9100BC3D2E /* SwiftlySalesforce in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE128327F0DB9100BC3D2E /* SwiftlySalesforce */; };
+		EAEE128627F0F26300BC3D2E /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE128527F0F26300BC3D2E /* LoadingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		EA49FFE52666E0B200917E3D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		EA49FFED2666E54800917E3D /* MyAccountsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountsLoader.swift; sourceTree = "<group>"; };
 		EA6351BE266693BB00D3F4C1 /* MySalesforceAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySalesforceAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6351C1266693BB00D3F4C1 /* MySalesforceAccountsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySalesforceAccountsApp.swift; sourceTree = "<group>"; };
 		EA6351C3266693BB00D3F4C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		EA6351DE266693BC00D3F4C1 /* MySalesforceAccountsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySalesforceAccountsUITests.swift; sourceTree = "<group>"; };
 		EA6351E0266693BC00D3F4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA6351F22666947600D3F4C1 /* Salesforce.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Salesforce.json; sourceTree = "<group>"; };
+		EAEE128527F0F26300BC3D2E /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF659252666EC06005F5ACD /* SwiftlySalesforce in Frameworks */,
+				EAEE128427F0DB9100BC3D2E /* SwiftlySalesforce in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,14 +103,14 @@
 		EA6351C0266693BB00D3F4C1 /* MySalesforceAccounts */ = {
 			isa = PBXGroup;
 			children = (
-				EA6351F22666947600D3F4C1 /* Salesforce.json */,
-				EA6351C1266693BB00D3F4C1 /* MySalesforceAccountsApp.swift */,
-				EA6351C3266693BB00D3F4C1 /* ContentView.swift */,
 				EA6351C5266693BC00D3F4C1 /* Assets.xcassets */,
-				EA6351CA266693BC00D3F4C1 /* Info.plist */,
-				EA6351C7266693BC00D3F4C1 /* Preview Content */,
+				EA6351C3266693BB00D3F4C1 /* ContentView.swift */,
 				EA49FFE52666E0B200917E3D /* ErrorView.swift */,
-				EA49FFED2666E54800917E3D /* MyAccountsLoader.swift */,
+				EA6351CA266693BC00D3F4C1 /* Info.plist */,
+				EAEE128527F0F26300BC3D2E /* LoadingState.swift */,
+				EA6351C1266693BB00D3F4C1 /* MySalesforceAccountsApp.swift */,
+				EA6351F22666947600D3F4C1 /* Salesforce.json */,
+				EA6351C7266693BC00D3F4C1 /* Preview Content */,
 			);
 			path = MySalesforceAccounts;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			);
 			name = MySalesforceAccounts;
 			packageProductDependencies = (
-				EAF659242666EC06005F5ACD /* SwiftlySalesforce */,
+				EAEE128327F0DB9100BC3D2E /* SwiftlySalesforce */,
 			);
 			productName = MySalesforceAccounts;
 			productReference = EA6351BE266693BB00D3F4C1 /* MySalesforceAccounts.app */;
@@ -232,7 +232,7 @@
 			);
 			mainGroup = EA6351B5266693BB00D3F4C1;
 			packageReferences = (
-				EAF659232666EC06005F5ACD /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */,
+				EAEE128227F0DB9100BC3D2E /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */,
 			);
 			productRefGroup = EA6351BF266693BB00D3F4C1 /* Products */;
 			projectDirPath = "";
@@ -277,10 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEE128627F0F26300BC3D2E /* LoadingState.swift in Sources */,
 				EA6351C4266693BB00D3F4C1 /* ContentView.swift in Sources */,
 				EA6351C2266693BB00D3F4C1 /* MySalesforceAccountsApp.swift in Sources */,
 				EA49FFE62666E0B200917E3D /* ErrorView.swift in Sources */,
-				EA49FFEE2666E54800917E3D /* MyAccountsLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -442,7 +442,7 @@
 				DEVELOPMENT_TEAM = 2R46AVEA2Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MySalesforceAccounts/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mike4aday.MySalesforceAccounts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -464,7 +464,7 @@
 				DEVELOPMENT_TEAM = 2R46AVEA2Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MySalesforceAccounts/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,7 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mike4aday.MySalesforceAccounts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -602,20 +602,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EAF659232666EC06005F5ACD /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */ = {
+		EAEE128227F0DB9100BC3D2E /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mike4aday/SwiftlySalesforce.git";
+			repositoryURL = "https://github.com/mike4aday/SwiftlySalesforce";
 			requirement = {
-				branch = v9.0.0;
+				branch = "v10.0.0-BETA";
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EAF659242666EC06005F5ACD /* SwiftlySalesforce */ = {
+		EAEE128327F0DB9100BC3D2E /* SwiftlySalesforce */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EAF659232666EC06005F5ACD /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */;
+			package = EAEE128227F0DB9100BC3D2E /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */;
 			productName = SwiftlySalesforce;
 		};
 /* End XCSwiftPackageProductDependency section */
