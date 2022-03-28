@@ -12,7 +12,7 @@ import SwiftlySalesforce
 struct MySalesforceAccountsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(try! Salesforce.connect())
         }
     }
 }

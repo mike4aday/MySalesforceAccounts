@@ -15,7 +15,7 @@
 		EA6351D4266693BC00D3F4C1 /* MySalesforceAccountsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6351D3266693BC00D3F4C1 /* MySalesforceAccountsTests.swift */; };
 		EA6351DF266693BC00D3F4C1 /* MySalesforceAccountsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6351DE266693BC00D3F4C1 /* MySalesforceAccountsUITests.swift */; };
 		EA6351F32666947600D3F4C1 /* Salesforce.json in Resources */ = {isa = PBXBuildFile; fileRef = EA6351F22666947600D3F4C1 /* Salesforce.json */; };
-		EAEE128427F0DB9100BC3D2E /* SwiftlySalesforce in Frameworks */ = {isa = PBXBuildFile; productRef = EAEE128327F0DB9100BC3D2E /* SwiftlySalesforce */; };
+		EAD1B31627F234F300029014 /* SwiftlySalesforce in Frameworks */ = {isa = PBXBuildFile; productRef = EAD1B31527F234F300029014 /* SwiftlySalesforce */; };
 		EAEE128627F0F26300BC3D2E /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE128527F0F26300BC3D2E /* LoadingState.swift */; };
 		EAEE128827F0FDC600BC3D2E /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE128727F0FDC600BC3D2E /* AsyncButton.swift */; };
 /* End PBXBuildFile section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAEE128427F0DB9100BC3D2E /* SwiftlySalesforce in Frameworks */,
+				EAD1B31627F234F300029014 /* SwiftlySalesforce in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +161,7 @@
 			);
 			name = MySalesforceAccounts;
 			packageProductDependencies = (
-				EAEE128327F0DB9100BC3D2E /* SwiftlySalesforce */,
+				EAD1B31527F234F300029014 /* SwiftlySalesforce */,
 			);
 			productName = MySalesforceAccounts;
 			productReference = EA6351BE266693BB00D3F4C1 /* MySalesforceAccounts.app */;
@@ -235,7 +235,7 @@
 			);
 			mainGroup = EA6351B5266693BB00D3F4C1;
 			packageReferences = (
-				EAEE128227F0DB9100BC3D2E /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */,
+				EAD1B31427F234F300029014 /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */,
 			);
 			productRefGroup = EA6351BF266693BB00D3F4C1 /* Products */;
 			projectDirPath = "";
@@ -488,7 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2R46AVEA2Z;
 				INFOPLIST_FILE = MySalesforceAccountsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,7 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2R46AVEA2Z;
 				INFOPLIST_FILE = MySalesforceAccountsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,7 +606,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EAEE128227F0DB9100BC3D2E /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */ = {
+		EAD1B31427F234F300029014 /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mike4aday/SwiftlySalesforce";
 			requirement = {
@@ -617,9 +617,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EAEE128327F0DB9100BC3D2E /* SwiftlySalesforce */ = {
+		EAD1B31527F234F300029014 /* SwiftlySalesforce */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EAEE128227F0DB9100BC3D2E /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */;
+			package = EAD1B31427F234F300029014 /* XCRemoteSwiftPackageReference "SwiftlySalesforce" */;
 			productName = SwiftlySalesforce;
 		};
 /* End XCSwiftPackageProductDependency section */
